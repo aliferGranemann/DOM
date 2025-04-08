@@ -1,0 +1,18 @@
+O que é o DOM e qual sua importância no JavaScript?
+O DOM é a estrutura da página. O JavaScript usa o DOM para acessar e alterar elementos HTML e CSS.
+
+Qual a diferença entre document.getElementById e document.querySelector?
+getElementById pega elementos por ID.
+querySelector usa qualquer seletor CSS (ID, classe, tag, etc.).
+
+O que são eventos em JavaScript? Cite três exemplos.
+Eventos são ações que o JS detecta para executar algo.
+Exemplos: click, keydown, submit.
+
+Explique a diferença entre innerText e innerHTML.
+innerText mostra só o texto.
+innerHTML mostra o texto com tags HTML.
+
+Como podemos alterar o estilo de um elemento HTML via JavaScript?
+Usando .style. Exemplo: element.style.color = "red".
+
