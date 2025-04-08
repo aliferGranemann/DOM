@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade JS</title>
+</head>
+<body>
+
+  <!-- Ex 6 -->
+  <h3>6. Mudar cor de fundo</h3>
+  <button onclick="document.body.style.backgroundColor='lightblue'">Mudar cor</button>
+
+  <!-- Ex 7 -->
+  <h3>7. Mostrar texto digitado</h3>
+  <input id="texto"><button onclick="mostrar()">Mostrar</button>
+  <p id="saida"></p>
+
+  <!-- Ex 8 -->
+  <h3>8. Contador</h3>
+  <button onclick="cont--, mostrarCont()">-</button>
+  <span id="cont">0</span>
+  <button onclick="cont++, mostrarCont()">+</button>
+
+  <!-- Ex 9 -->
+  <h3>9. Mudar cor digitando</h3>
+  <input id="cor" placeholder="Digite a cor">
+
+  <!-- Ex 10 -->
+  <h3>10. Formulário</h3>
+  <form onsubmit="enviar(event)">
+    <input id="nome" placeholder="Nome"><br>
+    <input id="email" placeholder="Email"><br>
+    <textarea id="msg" placeholder="Mensagem"></textarea><br>
+    <button>Enviar</button>
+  </form>
+  <div id="resposta"></div>
+
+  <script>
+    // Ex 7
+    function mostrar() {
+      document.getElementById('saida').innerText = document.getElementById('texto').value;
+    }
+
+    // Ex 8
+    let cont = 0;
+    function mostrarCont() {
+      document.getElementById('cont').innerText = cont;
+    }
+
+    // Ex 9
+    document.getElementById('cor').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        document.body.style.backgroundColor = this.value;
+      }
+    });
+
+    // Ex 10
+    function enviar(e) {
+      e.preventDefault();
+      let nome = document.getElementById('nome').value;
+      let email = document.getElementById('email').value;
+      let msg = document.getElementById('msg').value;
+      document.getElementById('resposta').innerHTML =
+        `<p>Nome: ${nome}<br>Email: ${email}<br>Mensagem: ${msg}</p>`;
+    }
+  </script>
+</body>
+</html>
